@@ -15,4 +15,22 @@ vim.keymap.set('n', '<leader>pS', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") , no_ignore=true })
 end)
 
+vim.keymap.set('n', '<leader>pb', function ()
+    builtin.buffers({
+        sort_mru=true,
+        ignore_current_buffer=true,
+        show_all_buffers=false,
+    })
+end)
 
+vim.keymap.set('n', '<leader>pB', function ()
+    builtin.buffers({
+        sort_mru=true,
+        ignore_current_buffer=true,
+        show_all_buffers=true,
+    })
+end)
+
+vim.keymap.set('n', '<leader>pc', function () builtin.commands() end)
+vim.keymap.set('n', '<leader>pq', function () builtin.quickfix() end)
+vim.keymap.set('n', '<leader>pj', function () builtin.quickfix() end)

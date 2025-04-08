@@ -50,6 +50,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "[p", function() vim.diagnostic.setqflist() end, opts)
   vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
+  vim.keymap.set("n", "<leader>vRR", function() vim.lsp.buf.references(nil, {loclist = true}) end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 
